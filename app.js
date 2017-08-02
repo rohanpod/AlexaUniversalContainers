@@ -33,15 +33,15 @@ app.set("view engine", "jade");
  * Executed before any event handlers. This is useful to setup new sessions, validate the applicationId, or do any other kind of validations.
  */
 
-/*alexaApp.pre = function(request, response, type) {
-  if (request.applicationId != SKILL_ID) {
+alexaApp.pre = function(request, response, type) {
+  if (request.session.sessionId.application.applicationId != SKILL_ID) {
     console.log('request.applicationId is: ' + request.applicationId);
     console.log('SKILL_ID is: ' + SKILL_ID);
     // fail ungracefully
     response.fail("Invalid applicationId");
   }
 };
-*/
+
 
 /**
  * Launch Handler
