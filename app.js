@@ -39,7 +39,7 @@ alexaApp.pre = function(request, response, type) {
     console.log('Session Id:' + request.sessionDetails.sessionId);
     console.log('Application details:' + request.sessionDetails.application.applicationId);
      
-  if (request.session.application.applicationId != SKILL_ID) {
+  if (request.sessionDetails.application.applicationId != SKILL_ID) {
    // console.log('request.applicationId is: ' + request.applicationId);
     //console.log('SKILL_ID is: ' + SKILL_ID);
     // fail ungracefully
