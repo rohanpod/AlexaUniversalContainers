@@ -35,9 +35,9 @@ app.set("view engine", "jade");
 
 alexaApp.pre = function(request, response, type) {
     console.log('SKILL_ID is: ' + SKILL_ID);
-    console.log('Session details:' + request.session);
-    console.log('Session Id:' + request.session.sessionId);
-    console.log('Application details:' + request.session.application);
+    console.log('Session details:' + request.sessionDetails);
+    console.log('Session Id:' + request.sessionDetails.sessionId);
+    console.log('Application details:' + request.sessionDetails.application.applicationId);
      
   if (request.session.application.applicationId != SKILL_ID) {
    // console.log('request.applicationId is: ' + request.applicationId);
